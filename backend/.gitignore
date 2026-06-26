@@ -1,0 +1,23 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases (SQLite local files)
+*.sqlite3
+
+# uv & Virtual Environments
+.venv/
+.uv/
+
+# Build and distribution artifacts
+*.egg-info/
+dist/
+build/
+
+# Type Checker Cache
+.mypy_cache/
+.pyright_cache/
+
+# env
+.env
