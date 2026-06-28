@@ -8,3 +8,13 @@ dependencies = [
     "django==5.2.15",
     "django-environ>=0.14.0",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.20",
+]
+
+[tool.uv.workspace]
+members = [
+    "openseat",
+]
