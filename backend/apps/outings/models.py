@@ -34,6 +34,7 @@ class Outing(BaseModel):
     chat_link = models.URLField(blank=True)
     status = models.CharField(max_length=3, choices=Status.choices, default=Status.ACTIVE)
     creator_attending = models.BooleanField(default=True)
+    requires_approval = models.BooleanField(default=False)
     
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
