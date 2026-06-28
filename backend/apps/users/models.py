@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from config.models import BaseModel
+from config.models import BaseModel, TimeStampedModel
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.utils.translation import gettext_lazy as _
 
@@ -53,7 +53,7 @@ class Group(BaseModel):
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     members = models.ManyToManyField(settings.AUTH_USER_MODEL, through='GroupMembership', related_name='seat_groups')
 
-class GroupMembership(BaseModel):
+class GroupMembership(TimeStampedModel):
     class Role(models.TextChoices):
         OWNER = 'OWN', _('Owner')
         MEMBER = 'MEM', _('Member')
