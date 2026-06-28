@@ -21,3 +21,6 @@ build/
 
 # env
 .env
+
+# ruff
+.ruff_cache
