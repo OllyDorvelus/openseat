@@ -38,10 +38,10 @@ class Interest(BaseModel):
 
 # profile model, extends django user model to include extra fields
 class Profile(BaseModel):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
     name = models.CharField(max_length=100)
     avatar_url = models.URLField(blank=True)
     bio = models.TextField(blank=True, max_length=500)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
     interests = models.ManyToManyField(Interest, blank=True)
 
     def __str__(self) -> str:
@@ -51,6 +51,7 @@ class Profile(BaseModel):
 class Group(BaseModel):
     name = models.CharField(max_length=100)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    description = models.TextField(max_length=500, blank=True)
     members = models.ManyToManyField(settings.AUTH_USER_MODEL, through='GroupMembership', related_name='seat_groups')
 
 class GroupMembership(TimeStampedModel):
