@@ -25,4 +25,5 @@ build/
 # ruff
 .ruff_cache
 
+# scratch
 scratch/
