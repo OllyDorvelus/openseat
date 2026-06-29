@@ -45,9 +45,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+FIRST_PARTIES = [
     'apps.users',
     'apps.outings',
+    'apps.trust',
 ]
+
+THIRD_PARTIES = [
+    'django_softdelete'
+]
+
+INSTALLED_APPS = INSTALLED_APPS + FIRST_PARTIES + THIRD_PARTIES
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

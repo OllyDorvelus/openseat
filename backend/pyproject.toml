@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "django==5.2.15",
     "django-environ>=0.14.0",
+    "django-soft-delete>=1.0.23",
 ]
 
 [dependency-groups]

@@ -54,9 +54,11 @@ class RSVP(TimeStampedModel):
         GROUP_MEMBER = 'GM', _('Group Member'),
         GUEST = 'GU', _("Guest")
 
-    seat = models.ForeignKey(Outing, on_delete=models.CASCADE, related_name='seat')
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     type = models.CharField(max_length=20, choices=Type.choices, default=Type.GUEST)
     status = models.CharField(max_length=20, choices=Status.choices, default=Status.CONFIRMED)
+
+    seat = models.ForeignKey(Outing, on_delete=models.CASCADE, related_name='seat')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
     class Meta:
         unique_together = ('seat', 'user')
