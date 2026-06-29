@@ -18,6 +18,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "django" },
     { name = "django-environ" },
+    { name = "django-soft-delete" },
 ]
 
 [package.dev-dependencies]
@@ -29,6 +30,7 @@ dev = [
 requires-dist = [
     { name = "django", specifier = "==5.2.15" },
     { name = "django-environ", specifier = ">=0.14.0" },
+    { name = "django-soft-delete", specifier = ">=1.0.23" },
 ]
 
 [package.metadata.requires-dev]
@@ -55,6 +57,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/57/e1/4c4ddcf6e90f023e89edb1d92f9a7fffce61ad4b691df497f2f5c0be6e26/django_environ-0.14.0.tar.gz", hash = "sha256:b6c48d93b9d2ff8a3ea14099e90c35aa4f101c1b4d5f262dfee0d27b06742ed7", size = 60417, upload-time = "2026-06-18T22:49:55.847Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1a/fe/67b423fc30f16d10259e901320fbc121746bf168aaaad9043e6ebb0110c1/django_environ-0.14.0-py3-none-any.whl", hash = "sha256:8dbe8a57f0a540ab8abd6f54f230de5e99e3a2c9d797cb9caecb037bca3d47d8", size = 20934, upload-time = "2026-06-18T22:49:54.355Z" },
+]
+
+[[package]]
+name = "django-soft-delete"
+version = "1.0.23"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/aa/98/c7c52a85b070b1703774df817b6460a7714655302a2d503f6447544f1a29/django_soft_delete-1.0.23.tar.gz", hash = "sha256:814659f0d19d4f2afc58b31ff73f88f0af66715ccef3b4fcd8f6b3a011d59b2a", size = 22458, upload-time = "2026-02-21T17:48:41.345Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/9e/77375a163c340fff03d037eac7d970ce006626e6c3aea87b5d159f052f8b/django_soft_delete-1.0.23-py3-none-any.whl", hash = "sha256:dd2133d4925d58308680f389daa2e150abf7b81a4f0abbbf2161a9db3b9f1e74", size = 19308, upload-time = "2026-02-21T17:48:39.974Z" },
 ]
 
 [[package]]
